@@ -5,7 +5,14 @@
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "runDB": " brew services start postgresql@14",
+    "stopDB": "brew services stop postgresql@14",
+    "createDB": "createdb vaccine_hub",
+    "dropDB": "dropdb vaccine_hub",
+    "connectDB": "psql vaccine_hub",
+    "runTable": "psql -d vaccine_hub -f vaccine-hub-schema.sql"
+
   },
   "author": "",
   "license": "ISC",
